@@ -27,7 +27,7 @@ copy.pop(); //changes made
 console.log(state); //[ 1, 2, 3, 4 ] //unaffected
 console.log(copy); //[ 1, 2, 3 ]
 ```
-Real life example
+Real life example on how to change value
 ```js
 var state = {name: "Ayush", age: 21}
 var copy = {...state}

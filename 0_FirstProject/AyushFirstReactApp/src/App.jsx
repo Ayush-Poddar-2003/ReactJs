@@ -1,10 +1,10 @@
 import React from "react";
 
 // Making our first component
-function App(){ //file name same
+function Apple(){
   return (
     <h1>Hii Gareebo</h1> //JSX
   )  
 }
 
-export default App; //As only one function, default export
+export default Apple; //exporting function

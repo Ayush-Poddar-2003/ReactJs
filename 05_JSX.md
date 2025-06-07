@@ -9,7 +9,6 @@ function Welcome(){
         <>
             <h3>I am {user}</h3>
             <h3>Sum of 10+20={10+20}</h3>
-            
             <button onClick = {()=>alert("Clicked")}>CLick Me</button>
         </>
     )
@@ -29,9 +28,7 @@ function Welcome() {
     null,
     createElement("h3", null, `I am ${user}`),
     createElement("h3", null, `Sum of 10+20=${10 + 20}`),
-    createElement(
-      "button",
-      { onClick: () => alert("Clicked") },
+    createElement("button", { onClick: () => alert("Clicked") },
       "Click Me"
     )
   );
@@ -42,33 +39,33 @@ export default Welcome;
 
 ## <center> CURLY BRACES
 
+Hels us with variable, functions ..
 ```jsx
 function App() {
-  const name = "Ayush";
-  function callFun(a,b){
+  const name = "Ayush"; //Variable
+  function callFun(a,b){ //function
     return "Sum is "+(a+b)
   }
-  const fruit = (name) =>{
+  const fruit = (name) =>{ //arrow function
     alert(name)
   }
-  const obj={
+  const obj={ //object
     name: "Ayush",
     age: 21
   }
 
   return (
+    // Using Everything created above
     <>
-      <h3>Variable used : {name}</h3>
-
-      Function used : {callFun(60,9)}
-      
+      <h3>{name}</h3>
+      callFun(60,9)}
       <button onClick = {()=>fruit("Apple")}>Click Here</button>
-
-      Object used : {obj.name} {obj.age}
+      {obj.name}
     </>
   )
 }
 
 export default App
-
 ```
+
+## <center> CLICK EVENTS

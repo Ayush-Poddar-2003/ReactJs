@@ -1,8 +1,9 @@
 # <center> COMPONENTS ?
 
+Components allow to break down complex UI into smaller manageable pieces.
 A React component is a JavaScript function that returns JSX   
 Components let you reuse UI.  
-Same like function, but name starts with Capital letter
+Same like function, but name starts with **Capital** letter
 
 ---
 Single Component
