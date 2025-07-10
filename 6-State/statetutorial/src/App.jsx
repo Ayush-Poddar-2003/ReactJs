@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Counter from "./Counter";
 
 function App() {
 
@@ -12,8 +13,11 @@ function App() {
     <>
       <h3>{fruit}</h3>
       <button onClick={changeFruit}>Click to change fruit</button>
+
+      <Counter/>
+
     </>
   )
 }
 
-export default App
+export default App;

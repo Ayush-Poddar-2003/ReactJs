@@ -1,3 +1,4 @@
+//Method 1 to export
 function Custom(){
     return(
         <div>
@@ -5,7 +6,9 @@ function Custom(){
         </div>
     )
 }
+export default Custom; //Exporting the component for use in other files. 
 
+//Method 2 direct
 export function Custom2(){
     return(
         <div>
@@ -14,5 +17,4 @@ export function Custom2(){
     )
 }
 
-export default Custom; //Exporting the component for use in other files. 
 

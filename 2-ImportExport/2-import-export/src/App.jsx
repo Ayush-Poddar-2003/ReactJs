@@ -10,4 +10,4 @@ function App() {
   )
 }
 
-export default App; //exporting the component so that it can be used in other files
+export default App; //exporting the component so that it can be used in other filesa

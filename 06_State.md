@@ -1,9 +1,8 @@
 # STATE
 
-Why State ?
 ```jsx
-function App() {
-
+function App() 
+{
   let Fruit = "Apple";
   const changeFruit = () => {
     Fruit = "Banana";
@@ -11,10 +10,9 @@ function App() {
 
   return (
     <>
-      <h3>State in Reactjs</h3>
       <h3>{Fruit}</h3>
 
-      <button onClick={changeFruit}>Change Fruit Name</button>
+      <button onClick={changeFruit}>Click</button>
     </>
   )
 }
@@ -22,16 +20,63 @@ function App() {
 export default App
 ```
 
-This will change fruit in backend but won't reflect   
-As reacts reflects changes only on re rendring   
-React don't give a shit to variable, it needs state
+This will change fruit in **backend**, you can check on console but won't reflected on webpage, As reacts reflects changes only on re rendring   
+React don't give a shit to variable, it needs **state**
 
-STATE ?  
-Container to store data just like variable  
-Mutable and dynamic  
-We have to import if want to use  
-Re renders component automatically unlike variable 
 
-HOOKS ?
-Speacial feature for functional component, lets us use react features  
-Usually starts from use
+# <center> STATE ?  
+Container to store data just like variable but Mutable and dynamic.  
+**Rerenders component automatically** unlike variable.   
+If you want to update and reflect values in the UI, use state.  
+We have to **import** it along with     
+
+**HOOKS** ?  
+Special features for functional components  
+
+---
+
+```JSX
+import { useState } from "react"; // Add this line
+
+function App() 
+{
+  // Rather than normal variable
+  const [fruit, setFruit] = useState("Apple"); //default = Apple
+
+  const changeFruit = () => {
+    setFruit = "Banana"; //Any changes on 2nd
+  }
+
+  return (
+    <>
+      <button onClick={changeFruit}>Click</button>
+    </>
+  )
+}
+
+export default App
+```
+
+OTHER EXAMPLE
+
+```JSX
+import { useState } from "react";
+
+const Counter = () => {
+
+  const [count, setCount] = useState(0)
+  const [rCount, setrCount] = useState(10)
+
+  return(
+    <div>
+      <h1>Counter : {count}  </h1>
+      <button onClick={()=> setCount(count+1)}> Increase Counter </button>
+
+      <h1>Reverse Counter : {rCount} </h1>
+      <button onClick={()=>setrCount(rCount-1)}>Decrease Counter</button>
+    </div>
+  )
+}
+
+export default Counter;
+```

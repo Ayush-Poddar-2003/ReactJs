@@ -1,15 +1,11 @@
 # <center> COMPONENTS ?
-
-Components allow to break down complex UI into smaller manageable pieces.
-A React component is a JavaScript function that returns JSX   
-Components let you reuse UI.  
+  
+A JavaScript function that returns JSX   
 Same like function, but name starts with **Capital** letter
 
----
-Single Component
 ```jsx
 // App.jsx
-function Welcome(){
+function Welcome(){ //Welcome is component, name need not same as fileName
   return(
     <div>
       <h1>Hey Buddy</h1>
@@ -17,29 +13,46 @@ function Welcome(){
   );
 }
 export default Welcome;
-
-// You can then render this inside your main file:
-
+```
+You can then render this inside your main file:
+```jsx
 //main.jsx
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx' 
+import Apple from './App.jsx' //Any name but location should be correct
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <Apple />   //Jo import kra whi use kro
   </StrictMode>,
 )
 ```
+## <center> TYPES
+### 1. Functional Component (Modern & preferred way)
+```JSX
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+#### 1.2. Arrow Function Component
+```JSX
+const Welcome = ({ name }) => <h1>Hello, {name}</h1>;
+```
+### 2. Class Component (Older)
+```jsx
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
 
-Multiple Components
+
+## <center>Multiple Components
 ```jsx
 function App(){
   return(
     <div>
       <h1>Hey Buddy</h1>
-      <Fruit></Fruit>
+      <Fruit></Fruit> //other components to be exported
       <Color></Color>
     </div>
   )
